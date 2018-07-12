@@ -1,0 +1,45 @@
+
+body,html{
+	margin:0px;
+}
+
+header{
+
+	height: 35vh;
+	width: 100%;
+	background-blend-node: soft-light;
+	background-image: url('../img/1.jpg');
+	background-color: rgb(100,100,100);
+	background-blend-mode: soft-light;
+	color:white;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	flex-direction: column;
+	background-size: cover;
+	background-position: center;
+	
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.iconMenu i{
+	cursor: pointer;
+	font-size: 70px;
+}
+
+.iconMenu p{
+    font-size: 15px;
+    color: #686877;
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;    
+    letter-spacing: 0.1em;
+    font-weight: 500;    
+}
+.iconMenu i:hover{
+	font-size:80px;
+}
