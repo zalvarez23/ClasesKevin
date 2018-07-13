@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clase 01</title>
+    <link rel="stylesheet" href="css/all.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+
+</head>
+
+<body ng-app="myApp" ng-controller="myController">
+
+	<header>
+    	<img src="{{imgAvatar}}" class="avatar" id="imgAvatar">
+    	<h1>Mi Primera Clase</h1>
+    	<p>Aprendiendo html y css</p>
+	</header>
+
+	 <center>
+	 <input type="" name="" ng-model="texto1">
+	  <div class="container iconMenu">
+	     <div class="row">
+	      <div class="col-md-3 col-sm-6" onmouseover="cambiarImagen(1);">
+	       <i class="fas fa-archway "></i>
+	       <p>Modulo 1</p>
+	       {{texto1}}
+	      </div>
+	      <div class="col-md-3 col-sm-6" onmouseover="cambiarImagen(2);">
+	         <i class="fab fa-adn"></i>
+	         <p>Modulo 2</p>
+	      </div>
+	      <div class="col-md-3 col-sm-6" onmouseover="cambiarImagen(3);">
+	          <i class="far fa-address-card"></i>
+	          <p>Modulo 3</p>
+	      </div>
+	      <div class="col-md-3 col-sm-6" onmouseover="cambiarImagen(4);">
+	          <i class="fab fa-accessible-icon"></i>
+	          <p>Modulo 4</p>
+	      </div>      
+	    </div>     
+	  </div>
+	  <div class="container iconMenu">
+	     <div class="row">
+	      <div class="col-md-3 col-sm-6" ng-click="cambiarImagen(0);">
+	       <i class="fas fa-archway "></i>
+	       <p>Modulo 1</p>
+	       {{texto1}}
+	      </div>
+	      <div class="col-md-3 col-sm-6" ng-click="cambiarImagen(1);">
+	         <i class="fab fa-adn"></i>
+	         <p>Modulo 2</p>
+	      </div>
+	      <div class="col-md-3 col-sm-6" ng-click="cambiarImagen(2);">
+	          <i class="far fa-address-card"></i>
+	          <p>Modulo 3</p>
+	      </div>
+	      <div class="col-md-3 col-sm-6" ng-click="cambiarImagen(3);">
+	          <i class="fab fa-accessible-icon"></i>
+	          <p>Modulo 4</p>
+	      </div>      
+	    </div>     
+	  </div>	  
+	</center>
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+ 
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/angular.min.js"></script>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+	// JAVASCRIPT
+
+	var texto1 = "Hola";
+	var numero = 2;
+
+	var objectos = {
+		id : 0,
+		nombre : 'kevin',
+		edad : 25
+	}
+
+	
+
+	var listaObjetos = [
+		{id : 1, imagen : 'img/1.jpg'},
+		{id : 2, imagen : 'img/2.jpg'},
+		{id : 3, imagen : 'img/3.jpg'},
+		{id : 4, imagen : 'img/4.jpg'},
+
+	]
+
+	var cambiarImagen = function(id){
+		var srcImagen;
+		var img = document.getElementById('imgAvatar');
+
+		listaObjetos.forEach(function(item,index){
+			var idObjeto = item.id;
+			if (idObjeto == id) {
+				img.src = item.imagen;
+			}
+		})
+	}
+
+	//
+
+
+	// INICIALIZANDO ANGULAR.
+
+	var app = angular.module('myApp',[])
+
+	app.controller('myController', function($scope,$timeout){
+
+		$scope.texto1 = "Hola 3";
+		$scope.listaObjetos = [
+			{id : 1, imagen : 'img/1.jpg'},
+			{id : 2, imagen : 'img/2.jpg'},
+			{id : 3, imagen : 'img/3.jpg'},
+			{id : 4, imagen : 'img/4.jpg'},
+		];
+
+		$scope.imgAvatar = $scope.listaObjetos[0].imagen;
+
+		$scope.cambiarImagen = function(index){
+			$scope.imgAvatar = $scope.listaObjetos[index].imagen;
+		};
+
+	})
+
+
+
+</script>

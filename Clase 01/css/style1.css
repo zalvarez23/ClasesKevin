@@ -4,10 +4,8 @@ body,html{
 }
 
 header{
-
 	height: 35vh;
 	width: 100%;
-	background-blend-node: soft-light;
 	background-image: url('../img/1.jpg');
 	background-color: rgb(100,100,100);
 	background-blend-mode: soft-light;
@@ -18,7 +16,7 @@ header{
 	flex-direction: column;
 	background-size: cover;
 	background-position: center;
-	
+
 }
 
 .avatar {
@@ -29,17 +27,25 @@ header{
 }
 
 .iconMenu i{
+	margin-top:50px;
 	cursor: pointer;
 	font-size: 70px;
 }
 
-.iconMenu p{
+.iconMenu p{	
     font-size: 15px;
     color: #686877;
     font-family: GillSans, Calibri, Trebuchet, sans-serif;    
     letter-spacing: 0.1em;
     font-weight: 500;    
 }
+
 .iconMenu i:hover{
 	font-size:80px;
+	color:#7d7dc7;
 }
+/*
+
+
+
+*/
