@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="css/all.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body ng-app="myApp" >
+  <div ng-controller = "homeController">
+    <header>
+      <br>
+      <img src="img/avatar.jpg" class="avatar">
+      <h1>Mi Segunda Clase {{nombre}} {{fecha}}</h1>
+      <p>Aprendiendo html y css</p>
+    </header>
+    
+    <br><br>
+    <center>
+    <div class="contentSuma">
+      <input ng-model="numeros.num1" ng-click="focus('input1');" id="input1" name="" >
+      <input ng-model="numeros.num2" ng-click="focus('input2');" id="input2" name="" >
+      <select ng-model="numeros.operacion">
+        <option value="0">-- Seleccionar --</option>
+        <option ng-repeat="fila in listSelect" >{{fila}}</option>
+      </select>
+      <h1>{{resultado}}</h1>
+    </div>
+    <button ng-click="sumar();">Prueba Suma</button>
+    <div class="container iconMenu">
+       <div class="row">
+        <div class="col-md-3 col-sm-6">
+         <i class="fas fa-archway "></i>
+         <p>Modulo 1</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+           <i class="fab fa-adn"></i>
+           <p>Modulo 2</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <i class="far fa-address-card"></i>
+            <p>Modulo 3</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <i class="fab fa-accessible-icon"></i>
+            <p>Modulo 4</p>
+        </div>      
+      </div>     
+    </div>
+  </center>    
+  </div>
+
+
+
+  <div ng-controller="menuController">
+    <h1>Menu Controlador {{nombre}}</h1>
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="plugins/jquery/jquery-3.3.1.slim.min.js"></script>
+ 
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+
+    <script src="plugins/angular/angular.js"></script>    
+    <script src="js/app.js"></script>    
+    <!-- CONTROLLADORES -->    
+    <script src="js/Controladores/homeController.js"></script>
+    <script src="js/Controladores/menuController.js"></script>
+
+    <!-- SERVICIOS -->
+    <script src="js/Servicios/homeServices.js"></script>
+    
+
+  </body>
+</html>
+
